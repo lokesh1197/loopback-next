@@ -1,3 +1,94 @@
+## Q4 2019 Roadmap
+
+### Overview
+
+In Q4 2019, here are the stories we would like to focus on:
+
+- wrap up on authentication and authorization stories
+- continue with `Inclusion of Related Models` epic
+- add more support for declarative support - From model definition to REST API
+  with no custom repository/controller classes
+- revisit the migration story targeting to have a migration guide
+
+### Scope
+
+#### Authentication
+
+- Token based authentication in API Explorer (Spike done in Q3)
+- [Allow `@authenticate` at class level](https://github.com/strongloop/loopback-next/issues/2460)
+- Refactoring, https://github.com/strongloop/loopback-next/issues/1996 and
+  https://github.com/strongloop/loopback-next/issues/2246
+
+#### Authorization
+
+- Update authorization tutorial
+  https://github.com/strongloop/loopback-next/issues/3694
+- Add authorization to shopping example,
+  https://github.com/strongloop/loopback-next/issues/3695
+
+#### Inclusion of related models
+
+_Todo: Miroslav to add what will be in Q4_
+
+- Part of MVP:
+
+  - Add inclusion resolvers to `lb4 relation` CLI,
+    https://github.com/strongloop/loopback-next/issues/3451
+  - Blog post: announce Inclusion of related models,
+    https://github.com/strongloop/loopback-next/issues/3452
+
+- Post MVP epic: https://github.com/strongloop/loopback-next/issues/3585
+
+#### From model definition to REST API with no custom repository/controller classes, https://github.com/strongloop/loopback-next/issues/2036
+
+_Todo: Miroslav to add more details_
+
+#### Migration
+
+**Part 1: General runtime**
+
+**Part 2: Authentication, Authorization, Built-in model**
+
+For each part,
+
+- Step 0: update comparison table in
+  https://loopback.io/doc/en/lb4/Understanding-the-differences.html
+- Step 1: create a skeleton in migration guide on what we should cover
+- Step 2: create smaller tasks to fill in the info for the migration guide
+  subsections
+
+#### ObjectID Coercion
+
+_Todo: Miroslav to create an epic_
+
+- Spike https://github.com/strongloop/loopback-next/issues/3456
+
+#### Production deployment/logging/monitoring, https://github.com/strongloop/loopback-next/issues/1054
+
+- Blog post showing the microservice version of shopping example and mention
+  what's the gaps
+
+_Todo: Diana to create task_
+
+#### Test/Enable Node.js 12 support for connectors - https://github.com/strongloop/loopback-next/issues/3072
+
+- loopback-connector-kv-redis
+- loopback-connector-grpc
+
+#### Preparation of CASCON workshop and poster
+
+#### Infrastructure
+
+- Fix CI for loopback@3.x. _Todo: Miroslav to create a GH isse_
+
+### Stretch Goals
+
+- Review extensions that are upvoted by lots of people.  
+  https://github.com/strongloop/loopback-next/issues/512
+- Support ENUM type, https://github.com/strongloop/loopback-next/issues/3033
+
+---
+
 ## Q3 Roadmap
 
 ### Overview
