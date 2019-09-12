@@ -49,19 +49,13 @@ Stretch goals:
 - From relation definition to REST API with auto-generated repository/controller classes https://github.com/strongloop/loopback-next/issues/2483
 - From datasource config to Service REST API with no proxy/controller classes https://github.com/strongloop/loopback-next/issues/3717
 
-#### Migration
+#### Migration guide
 
-**Part 1: General runtime**
+The Epic: https://github.com/strongloop/loopback-next/issues/453
 
-**Part 2: Authentication, Authorization, Built-in model**
-
-For each part,
-
-- Step 0: update comparison table in
-  https://loopback.io/doc/en/lb4/Understanding-the-differences.html
-- Step 1: create a skeleton in migration guide on what we should cover
-- Step 2: create smaller tasks to fill in the info for the migration guide
-  subsections
+- Spike 1: General runtime - see https://github.com/strongloop/loopback-next/issues/3718
+- Spike 2: Authentication & authorization - see https://github.com/strongloop/loopback-next/issues/3719
+- Prioritize & plan follow-up issues identified in the spikes
 
 #### ObjectID Coercion
 
