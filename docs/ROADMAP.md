@@ -59,8 +59,9 @@ The Epic: https://github.com/strongloop/loopback-next/issues/453
 
 #### ObjectID Coercion
 
-_Todo: Miroslav to create an epic_
+The Epic: https://github.com/strongloop/loopback-next/issues/3720
 
+- `Model.toObject()` should preserve prototypes (e.g. `Date` and `ObjectID` values) https://github.com/strongloop/loopback-next/issues/3607
 - Spike https://github.com/strongloop/loopback-next/issues/3456
 
 #### Production deployment/logging/monitoring, https://github.com/strongloop/loopback-next/issues/1054
@@ -79,7 +80,7 @@ _Todo: Diana to create task_
 
 #### Infrastructure
 
-- Fix CI for loopback@3.x. _Todo: Miroslav to create a GH isse_
+- Fix CI for loopback@3.x. https://github.com/strongloop/loopback/issues/4252
 
 ### Stretch Goals
 
