@@ -28,16 +28,16 @@ In Q4 2019, here are the stories we would like to focus on:
 
 #### Inclusion of related models
 
-_Todo: Miroslav to add what will be in Q4_
+Finish the MVP scope as tracked by Epic https://github.com/strongloop/loopback-next/issues/1352
+    
+- Reject create/update requests when data contains navigational properties https://github.com/strongloop/loopback-next/issues/3439
+- Add inclusion resolvers to lb4 relation CLI https://github.com/strongloop/loopback-next/issues/3451
+- Verify relation type in resolve{Relation}Metadata https://github.com/strongloop/loopback-next/issues/3440
+- Run repository tests for PostgreSQL https://github.com/strongloop/loopback-next/issues/3436
+- Run repository tests for Cloudant https://github.com/strongloop/loopback-next/issues/3437
+- Blog post: announce Inclusion of related models https://github.com/strongloop/loopback-next/issues/3452
 
-- Part of MVP:
-
-  - Add inclusion resolvers to `lb4 relation` CLI,
-    https://github.com/strongloop/loopback-next/issues/3451
-  - Blog post: announce Inclusion of related models,
-    https://github.com/strongloop/loopback-next/issues/3452
-
-- Post MVP epic: https://github.com/strongloop/loopback-next/issues/3585
+See the post-MVP Epic for the list of stories out of scope of the initial release: https://github.com/strongloop/loopback-next/issues/3585
 
 #### From model definition to REST API with no custom repository/controller classes, https://github.com/strongloop/loopback-next/issues/2036
 
