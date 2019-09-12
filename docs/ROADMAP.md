@@ -39,9 +39,15 @@ Finish the MVP scope as tracked by Epic https://github.com/strongloop/loopback-n
 
 See the post-MVP Epic for the list of stories out of scope of the initial release: https://github.com/strongloop/loopback-next/issues/3585
 
-#### From model definition to REST API with no custom repository/controller classes, https://github.com/strongloop/loopback-next/issues/2036
+#### From model definition to REST API with no custom repository/controller classes
 
-_Todo: Miroslav to add more details_
+The Epic: https://github.com/strongloop/loopback-next/issues/2036
+
+We need to finish the spike first, then we will have a full list of stories to work on. See https://github.com/strongloop/loopback-next/pull/3617
+
+Stretch goals:
+- From relation definition to REST API with auto-generated repository/controller classes https://github.com/strongloop/loopback-next/issues/2483
+- From datasource config to Service REST API with no proxy/controller classes https://github.com/strongloop/loopback-next/issues/3717
 
 #### Migration
 
