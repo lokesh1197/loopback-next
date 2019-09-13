@@ -43,7 +43,12 @@ See the post-MVP Epic for the list of stories out of scope of the initial releas
 
 The Epic: https://github.com/strongloop/loopback-next/issues/2036
 
-We need to finish the spike first, then we will have a full list of stories to work on. See https://github.com/strongloop/loopback-next/pull/3617
+- Implement TestSandbox.writeTextFile https://github.com/strongloop/loopback-next/issues/3731
+- Improve `defineCrudRestController` to create a named controller class https://github.com/strongloop/loopback-next/issues/3732
+- Add `defineCrudRepositoryClass` - a helper to create a named repository class https://github.com/strongloop/loopback-next/issues/3733
+- Model API booter & builder https://github.com/strongloop/loopback-next/issues/3736
+- Add CrudRestApiBuilder to `@loopback/rest-crud` https://github.com/strongloop/loopback-next/issues/3737
+- Example app showing CrudRestApiBuilder https://github.com/strongloop/loopback-next/issues/3738
 
 Stretch goals:
 - From relation definition to REST API with auto-generated repository/controller classes https://github.com/strongloop/loopback-next/issues/2483
