@@ -43,6 +43,29 @@ related routes, you need to perform the following steps:
 This section describes how to define a `belongsTo` relation at the model level
 using the `@belongsTo` decorator to define the constraining foreign key.
 
+The definition of the `belongsTo` relation is inferred by using the `@belongsTo`
+decorator. The decorator takes in a function resolving the target model class
+constructor and designates the relation type. It also calls `property()` to
+ensure that the decorated property is correctly defined. Usage of belongsTo
+relation is similar to legacy datasource juggler.
+
+The `@belongsTo` decorator takes three parameters :
+
+- `target model class`, is a mandatory field
+- `relation definition`, is an optional field - has three attributes, keyFrom,
+  keyTo, name
+  - `keyFrom` is a property name of the foreign key on the "source" model (for
+    example, `customerId` on `Order` model). `keyFrom` is always set to the
+    `decorated property name`. `keyFrom` attribute has become a dummy parameter
+    and is not relevant any more with the recent changes.
+  - `keyTo` is a property name on the "target" model, typically the primary key
+    of the "target" model. `keyTo` attribute defaults to the value `id`.
+  - `name` is the target model name. name attribute defaults to
+    `{decorated-property-name}` after stripping the trailing `Id` suffix
+- `property definition`, is an optional field - creates a property decorator
+  implicitly. The name attribute in the definition can be used to customize
+  datasource column name.
+
 {% include code-caption.html content="/src/models/order.model.ts" %}
 
 ```ts
@@ -75,10 +98,36 @@ export interface OrderRelations {
 export type OrderWithRelations = Order & OrderRelations;
 ```
 
-The definition of the `belongsTo` relation is inferred by using the `@belongsTo`
-decorator. The decorator takes in a function resolving the target model class
-constructor and designates the relation type. It also calls `property()` to
-ensure that the decorated property is correctly defined.
+The above example can also be expanded with explicit relation and property
+definitions as follows,
+
+- The standard naming convention for the foreign key property in the source
+  model is `target model name` + `Id`. (for example, Order.customerId).
+- If the property name in the source model has to be customized then the `name`
+  attribute in the relation definition (the target model name) has to be stated
+  explicitly. Also, the corresponding `hasMany` relation in the `target` model
+  has to be modified with the correct `keyTo` value.
+- In the following example :
+  - a relation definition is added to the decorator of the property with a
+    customized name (`cust_Id`).
+  - a property definition is added with the customized db column name
+    (`customer_id`).
+
+```ts
+class Order extends Entity {
+  // constructor, properties, etc.
+  @belongsTo(
+    () => Customer,
+    {keyFrom: 'cust_Id', keyTo: 'id', name: 'customer'},
+    {name: 'customer_id'},
+  )
+  cust_Id: number;
+}
+
+export interface OrderRelations {
+  customer?: CustomerWithRelations;
+}
+```
 
 A usage of the decorator with a custom primary key of the target model for the
 above example is as follows:
@@ -86,7 +135,7 @@ above example is as follows:
 ```ts
 class Order extends Entity {
   // constructor, properties, etc.
-  @belongsTo(() => Customer, {keyTo: 'pk'})
+  @belongsTo(() => Customer, { keyTo: 'customized_target_property' }),
   customerId: number;
 }
 
