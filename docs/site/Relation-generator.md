@@ -45,7 +45,7 @@ Defining lb4 relation in one command line interface (cli):
 ```sh
 lb4 relation --sourceModel=<sourceModel>
 --destinationModel=<destinationModel> --foreignKeyName=<foreignKeyName>
---relationType=<hasMany|belongsTo> [--relationName=<relationName>] [--format]
+--relationType=<hasMany|hasOne|belongsTo> [--relationName=<relationName>] [--format]
 ```
 
 - `<relationType>` - Type of the relation that will be created between the
